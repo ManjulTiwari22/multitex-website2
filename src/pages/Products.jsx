@@ -59,7 +59,7 @@ function Products() {
       <Heading>Our Products</Heading>
       <ProductGrid>
         <ProductCard>
-          <ProductImage />
+        <ProductImage src="/assets/filtration.jpg" alt="Filtration & Separation Equipment" />
           <ProductTitle>Filtration & Separation Equipment</ProductTitle>
           <ProductDesc>Advanced filtration and separation solutions tailored to industry standards.</ProductDesc>
         </ProductCard>

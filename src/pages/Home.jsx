@@ -5,6 +5,37 @@ const fadeIn = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
+const Hero = styled.div`
+  background-image: url('/images/hero-bg.jpg'); /* Place your image in public/images folder */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  @media (max-width: 768px) {
+    padding: 4rem 1.5rem;
+  }
+`;
+
+const HeroTitle = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+`;
+
+const HeroSubtitle = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+`;
+
+
 const Container = styled.div`
   padding: 3rem;
   background-color: #f8f9fa;
@@ -18,13 +49,13 @@ const Container = styled.div`
 
 const Heading = styled.h1`
   font-size: 2.5rem;
-  color: #003366;
+  color: #2C2478;
   margin-bottom: 1rem;
 `;
 
 const SubHeading = styled.h2`
   font-size: 1.8rem;
-  color: #00509e;
+  color: #2C2478;
   margin-bottom: 1rem;
 `;
 
@@ -46,7 +77,7 @@ const Highlights = styled.ul`
 `;
 
 const HighlightItem = styled.li`
-  background-color: #003366;
+  background-color: #2C2478;
   color: white;
   padding: 1rem;
   border-radius: 8px;
@@ -55,7 +86,7 @@ const HighlightItem = styled.li`
 
   &:hover {
     transform: scale(1.1);
-    background-color: #00509e;
+    background-color: rgb(66, 60, 122);
   }
 `;
 
@@ -66,7 +97,7 @@ const Section = styled.div`
 
 const SectionHeading = styled.h3`
   font-size: 1.6rem;
-  color: #003366;
+  color: #2C2478;
   margin-bottom: 1rem;
 `;
 
@@ -77,16 +108,18 @@ const ProductList = styled.ul`
 `;
 
 const Button = styled.a`
-  background-color: #003366;
+  background-color: #2C2478;
   color: white;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
   transition: background-color 0.3s, transform 0.3s;
 
   &:hover {
-    background-color: #00509e;
+    background-color: #2C2478;
     transform: scale(1.05);
   }
 `;
@@ -97,8 +130,9 @@ function Home() {
       <Heading>Welcome to Multitex Group</Heading>
       <SubHeading>Innovative Engineering Solutions</SubHeading>
       <Text>
-        MULTITEX is a leading global design, engineering, and manufacturing company providing technology solutions to sectors such as Oil & Gas, Power, Petrochemicals, Refineries, Pipelines, and Nuclear.
+        Multitex Group is a global leader in designing, engineering, and manufacturing high-performance technological systems tailored for the energy and process sectors. With a strong legacy of innovation, we provide robust solutions to the Oil & Gas, Power, Petrochemical, Refinery, Pipeline, and Nuclear industries—helping them achieve operational excellence and environmental compliance.
       </Text>
+
       <Highlights>
         <HighlightItem>Oil & Gas 🔥</HighlightItem>
         <HighlightItem>Power ⚡</HighlightItem>
@@ -111,9 +145,9 @@ function Home() {
       <Section>
         <SectionHeading>Products</SectionHeading>
         <ProductList>
-          <li><strong>Gas Filters:</strong> Gas filtration solutions up to 0.3 micron particle size.</li>
-          <li><strong>Multi Cyclone Scrubbers:</strong> Removal of liquid and dry impurities at various stages.</li>
-          <li><strong>Condenser Online Tube Cleaning:</strong> Solutions to prevent fouling and scaling.</li>
+          <li><strong>Gas Filters:</strong> High-efficiency gas filtration systems capable of removing particles as fine as 0.3 microns. Ideal for gas conditioning units and critical processing environments where purity matters.</li>
+          <li><strong>Multi Cyclone Scrubbers:</strong> Engineered to separate and eliminate liquid droplets and solid particulates in gas streams, ensuring protection and prolonged life of downstream equipment.</li>
+          <li><strong>Condenser Online Tube Cleaning Systems:</strong> Intelligent fouling prevention solutions that keep condenser tubes clean during operation, improving thermal efficiency and reducing energy costs.</li>
         </ProductList>
         <Button href="/products">View More Products</Button>
       </Section>
@@ -121,9 +155,9 @@ function Home() {
       <Section>
         <SectionHeading>Packages & Services</SectionHeading>
         <ProductList>
-          <li><strong>Gas Sweetening:</strong> Emission reduction and gas monetization strategies.</li>
-          <li><strong>Gas Processing:</strong> Expert configurations for hydrocarbon processes.</li>
-          <li><strong>Gas Dehydration:</strong> Gas treatment solutions for entrained contaminants.</li>
+          <li><strong>Gas Sweetening:</strong> Comprehensive technologies for removing H<sub>2</sub>S and CO<sub>2</sub> from natural gas, enabling cleaner emissions and enhanced monetization of gas resources.</li>
+          <li><strong>Gas Processing:</strong> Integrated packages designed to separate, purify, and compress various hydrocarbon streams. Our solutions are modular, scalable, and optimized for high efficiency.</li>
+          <li><strong>Gas Dehydration:</strong> Advanced TEG-based and molecular sieve systems to remove moisture from gas, protecting pipeline integrity and preventing hydrate formation in colder environments.</li>
         </ProductList>
         <Button href="/packages">View More Packages</Button>
       </Section>

@@ -8,7 +8,7 @@ const slideDown = keyframes`
 `;
 
 const Nav = styled.nav`
-  background: linear-gradient(90deg, #003366, #00509e);
+  background: linear-gradient(90deg,rgb(255, 255, 255), #2C2478);
   padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -18,12 +18,22 @@ const Nav = styled.nav`
   position: relative;
 `;
 
-const BrandLink = styled(Link)`
+const Brand = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+`;
+
+const Logo = styled.img`
+  height: 40px;
+`;
+
+const BrandText = styled.span`
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: color 0.3s;
 
   &:hover {
     color: #ffd700;
@@ -40,7 +50,7 @@ const NavLinks = styled.div`
     position: absolute;
     top: 60px;
     right: 0;
-    background: #003366;
+    background: #2C2478;
     width: 100%;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -89,7 +99,9 @@ function Header() {
 
   return (
     <Nav>
-      <BrandLink to="/">Multitex Group</BrandLink>
+      <Brand to="/">
+        <Logo src="/assets/logo.png" alt="Multitex Logo" />
+      </Brand>
       <Hamburger onClick={() => setOpen(!open)}>
         <div style={{ transform: open ? 'rotate(45deg) translate(5px, 5px)' : 'none' }} />
         <div style={{ opacity: open ? 0 : 1 }} />
