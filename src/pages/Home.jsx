@@ -1,13 +1,12 @@
+// src/pages/Home.js
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-scroll'; // For smooth scroll
+import { Link as ScrollLink } from 'react-scroll';
 
-// === Animations ===
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 `;
 
-// === Styled Components ===
 const Hero = styled.div`
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
@@ -129,19 +128,19 @@ const Button = styled.a`
 function Home() {
   return (
     <>
-      {/* Hero Section */}
       <Hero>
         <HeroTitle>Multitex Group</HeroTitle>
         <HeroSubtitle>Innovative Engineering Solutions for a Sustainable Future</HeroSubtitle>
-        <Button href="#main-content">Explore More</Button>
+        <ScrollLink to="main-content" smooth={true} duration={600}>
+          <Button as="div">Explore More</Button>
+        </ScrollLink>
       </Hero>
 
-      {/* Main Content */}
       <Container id="main-content">
         <Heading>Welcome to Multitex Group</Heading>
         <SubHeading>Innovative Engineering Solutions</SubHeading>
         <Text>
-          Multitex Group is a global leader in designing, engineering, and manufacturing high-performance technological systems tailored for the energy and process sectors. With a strong legacy of innovation, we provide robust solutions to the Oil & Gas, Power, Petrochemical, Refinery, Pipeline, and Nuclear industries—helping them achieve operational excellence and environmental compliance.
+          Multitex Group is a global leader in designing, engineering, and manufacturing high-performance technological systems...
         </Text>
 
         <Highlights>
@@ -156,9 +155,9 @@ function Home() {
         <Section>
           <SectionHeading>Products</SectionHeading>
           <ProductList>
-            <li><strong>Gas Filters:</strong> High-efficiency gas filtration systems capable of removing particles as fine as 0.3 microns. Ideal for gas conditioning units and critical processing environments where purity matters.</li>
-            <li><strong>Multi Cyclone Scrubbers:</strong> Engineered to separate and eliminate liquid droplets and solid particulates in gas streams, ensuring protection and prolonged life of downstream equipment.</li>
-            <li><strong>Condenser Online Tube Cleaning Systems:</strong> Intelligent fouling prevention solutions that keep condenser tubes clean during operation, improving thermal efficiency and reducing energy costs.</li>
+            <li><strong>Gas Filters:</strong> High-efficiency gas filtration systems...</li>
+            <li><strong>Multi Cyclone Scrubbers:</strong> Engineered to separate and eliminate liquid droplets...</li>
+            <li><strong>Condenser Cleaning Systems:</strong> Intelligent fouling prevention solutions...</li>
           </ProductList>
           <Button href="/products">View More Products</Button>
         </Section>
@@ -166,9 +165,9 @@ function Home() {
         <Section>
           <SectionHeading>Packages & Services</SectionHeading>
           <ProductList>
-            <li><strong>Gas Sweetening:</strong> Comprehensive technologies for removing H<sub>2</sub>S and CO<sub>2</sub> from natural gas, enabling cleaner emissions and enhanced monetization of gas resources.</li>
-            <li><strong>Gas Processing:</strong> Integrated packages designed to separate, purify, and compress various hydrocarbon streams. Our solutions are modular, scalable, and optimized for high efficiency.</li>
-            <li><strong>Gas Dehydration:</strong> Advanced TEG-based and molecular sieve systems to remove moisture from gas, protecting pipeline integrity and preventing hydrate formation in colder environments.</li>
+            <li><strong>Gas Sweetening:</strong> Remove H<sub>2</sub>S and CO<sub>2</sub>...</li>
+            <li><strong>Gas Processing:</strong> Integrated packages designed to separate and purify...</li>
+            <li><strong>Gas Dehydration:</strong> TEG-based systems to remove moisture from gas...</li>
           </ProductList>
           <Button href="/packages">View More Packages</Button>
         </Section>
