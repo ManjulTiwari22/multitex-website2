@@ -108,13 +108,14 @@ function Header() {
         <div style={{ transform: open ? 'rotate(-45deg) translate(6px, -6px)' : 'none' }} />
       </Hamburger>
       <NavLinks style={{ display: open ? 'flex' : '' }}>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/products">Products</NavLink>
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/clients">Clients</NavLink>
-        <NavLink to="/careers">Careers</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </NavLinks>
+  <NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink>
+  <NavLink to="/products" onClick={() => setOpen(false)}>Products</NavLink>
+  <NavLink to="/services" onClick={() => setOpen(false)}>Services</NavLink>
+  <NavLink to="/clients" onClick={() => setOpen(false)}>Clients</NavLink>
+  <NavLink to="/careers" onClick={() => setOpen(false)}>Careers</NavLink>
+  <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
+</NavLinks>
+
     </Nav>
   );
 }

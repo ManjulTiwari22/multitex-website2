@@ -1,18 +1,29 @@
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import { Outlet } from 'react-router-dom'; // if using react-router
 import styled from 'styled-components';
 
-const FooterContainer = styled.footer`
-  background: #2C2478;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;
 
-function Footer() {
+const ContentWrapper = styled.main`
+  flex: 1;
+`;
+
+function App() {
   return (
-    <FooterContainer>
-      © {new Date().getFullYear()} Multitex Group. All Rights Reserved.
-    </FooterContainer>
+    <AppContainer>
+      <Header />
+      <ContentWrapper>
+        <Outlet /> {/* or your routes or main content */}
+      </ContentWrapper>
+      <Footer />
+    </AppContainer>
   );
 }
 
-export default Footer;
+export default App;
